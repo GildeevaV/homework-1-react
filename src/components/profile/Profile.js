@@ -1,11 +1,12 @@
 import React from "react";
 
 
-const Profile = (props) => {
-console.log('props', props)
-  const { name, avatar, location, tag, stats } = props.user;
+const Profile = ({user}) => {
+
+  const { name, avatar, location, tag, stats } = user;
   
-props.x("hello");
+  
+    // console.log
     return (
       <div className="profile">
     <div className="description">
@@ -39,7 +40,6 @@ props.x("hello");
 }
 
 export default Profile;
-
 // Profile.propTypes = {
 //   user: PropTypes.shape ({
 //     name: PropTypes.string,
