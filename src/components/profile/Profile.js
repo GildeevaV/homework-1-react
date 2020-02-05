@@ -1,16 +1,19 @@
 import React from "react";
 
-const Profile = ({user}) => (
-    const { name, avatar, location, tag, stats } = user;
-    console.log
+
+const Profile = (props) => {
+console.log('props', props)
+  const { name, avatar, location, tag, stats } = props.user;
+  
+props.x("hello");
     return (
-  <div className="profile">
+      <div className="profile">
     <div className="description">
       <img
         src={avatar}
         alt="user avatar"
         className="avatar"
-      />
+        />
       <p className="name">{name}</p>
       <p className="tag">@{tag}</p>
       <p className="location">{location}</p>
@@ -31,15 +34,18 @@ const Profile = ({user}) => (
       </li>
     </ul>
   </div>
-);
-    };
-    export default Profile;
-    Profile.propTypes = {
-        user: PropTypes.shape ({
-            name: PropTypes.string,
-            avatar: PropTypes.string,
-            location: PropTypes.string,
-            tag: PropTypes.string,
-            stats: PropTypes.string,
-        })
-    };
+)
+
+}
+
+export default Profile;
+
+// Profile.propTypes = {
+//   user: PropTypes.shape ({
+//     name: PropTypes.string,
+//             avatar: PropTypes.string,
+//             location: PropTypes.string,
+//             tag: PropTypes.string,
+//             stats: PropTypes.string,
+//         })
+//     };
